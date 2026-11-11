@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootFavorites"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:orientation="vertical"
+    android:paddingStart="18dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnBackFavorites"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_circle_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/blue"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="Mis libros favoritos"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="♡"
+            android:textColor="#E53935"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Tu colección personal de libros guardados."
+        android:textColor="@color/muted"
+        android:textSize="14sp" />
+
+    <ProgressBar
+        android:id="@+id/progressFavorites"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvFavoritesEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="26dp"
+        android:text="Aún no tienes libros favoritos. Toca el corazón de un libro para guardarlo aquí."
+        android:textColor="@color/muted"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoriteBooks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+</LinearLayout>
